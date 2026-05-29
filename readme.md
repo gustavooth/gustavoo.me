@@ -6,6 +6,19 @@ Single-page dark portfolio construído com **React + Vite + TypeScript + Tailwin
 
 ![Portfólio gustavoo.me](screenshots/image.webp)
 
+## Funcionalidades
+
+- 🎬 **Loading screen** animado (contador 000→100) e **hero** com vídeo de fundo
+- 🧩 **Seções**: Hero, Projetos (bento grid + modal), Explorações (galeria parallax com GSAP ScrollTrigger), Sobre, Contato
+- 🖼️ **Imagens otimizadas** em 3 formatos via `<picture>` (AVIF → WebP → JPG)
+- 🎞️ **Vídeo** de fundo em WebM (VP9) com fallback MP4 (H.264), ~90% menor que o original
+- 🔍 **SEO completo**: meta tags, Open Graph/Twitter, JSON-LD (Schema.org), `sitemap.xml`, `robots.txt` e `llms.txt` para crawlers de IA
+- 🐳 **Docker**: build e deploy estático com um comando
+
+## Tecnologias
+
+React 18 · Vite 5 · TypeScript · Tailwind CSS 3 · GSAP · Framer Motion · nginx (Docker)
+
 ## Desenvolvimento
 
 ```bash
@@ -48,10 +61,21 @@ configurados em `nginx.conf`. A imagem final tem ~86 MB.
 ## Estrutura
 
 ```
-public/            # assets servidos como estão (vídeo, favicon, imagens dos projetos)
-  projetos/        # imagens em 3 formatos: .avif / .webp / .jpg
+public/              # assets servidos como estão
+  projetos/          # imagens dos projetos em 3 formatos (.avif / .webp / .jpg)
+  hero.webm/.mp4     # vídeo de fundo do hero
+  favicon.svg        # ícone do site
+  og-image.jpg       # imagem de preview para redes sociais
+  robots.txt         # regras de indexação (inclui crawlers de IA)
+  sitemap.xml        # mapa do site
+  llms.txt           # guia para agentes de IA
+  site.webmanifest   # manifesto PWA
 src/
-  components/      # seções: Hero, Works, Explorations, About, Contact, etc.
-  data/projects.ts # dados dos projetos do portfólio
-  index.css        # design system (variáveis HSL, animações, utilities)
+  components/        # seções: Hero, Works, Explorations, About, Contact, etc.
+  data/projects.ts   # dados dos projetos do portfólio
+  index.css          # design system (variáveis HSL, animações, utilities)
+index.html           # HTML base com meta tags de SEO e JSON-LD
+Dockerfile           # build multi-stage (Node → nginx)
+docker-compose.yml   # orquestração para "docker compose up"
+nginx.conf           # configuração do nginx (gzip, cache, SPA)
 ```
