@@ -43,8 +43,8 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 md:pt-6 px-4">
       <div
-        className={`inline-flex items-center rounded-full backdrop-blur-md border border-white/10 bg-surface px-2 py-2 transition-shadow ${
-          scrolled ? "shadow-md shadow-black/10" : ""
+        className={`inline-flex items-center rounded-full backdrop-blur-xl border border-white/10 bg-surface/60 px-2 py-2 transition-shadow ${
+          scrolled ? "shadow-lg shadow-black/20" : ""
         }`}
       >
         {/* Logo */}
@@ -55,10 +55,12 @@ export default function Navbar() {
           aria-label="Início"
         >
           <span className="absolute inset-0 rounded-full accent-gradient" />
-          <span className="absolute inset-[2px] rounded-full bg-bg flex items-center justify-center">
-            <span className="font-display italic text-[13px] text-text-primary">
-              GO
-            </span>
+          <span className="absolute inset-[2px] rounded-full bg-bg flex items-center justify-center overflow-hidden">
+            <img
+              src="favicon.svg"
+              alt="Gustavo Oliveira"
+              className="w-full h-full object-cover"
+            />
           </span>
         </a>
 
