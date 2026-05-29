@@ -36,6 +36,7 @@ export default function Contact() {
         playsInline
         className="absolute top-1/2 left-1/2 min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2 scale-y-[-1]"
       >
+        <source src="hero.webm" type="video/webm" />
         <source src="hero.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-black/60" />
