@@ -1,1 +1,0 @@
-Categoria: Softwares Desktop e Arquitetura Low-Level. Stack Técnico: C++, Vulkan API, CMake, Dear ImGui. O Desafio: O cliente exigia uma aplicação desktop de altíssima performance para visualização de dados complexos/renderização, onde engines comerciais apresentavam overhead indesejado. O objetivo era extrair o máximo de desempenho do hardware.
