@@ -1,0 +1,29 @@
+# Gustavo Oliveira — Desenvolvedor Full Stack Sênior
+
+> Gustavo Oliveira da Silva é Desenvolvedor Full Stack Sênior (Web, Mobile, Infraestrutura & Automação), em Sete Lagoas/MG, Brasil. Cria sites, aplicativos e sistemas sob medida — rápidos, seguros e feitos para escalar — com foco em performance, eficiência e segurança.
+
+## Sobre
+
+- Começou pelos fundamentos com a linguagem C (lógica, algoritmos, gestão de memória).
+- Hoje constrói back-ends de alta concorrência com Rust e Actix, priorizando performance e segurança.
+- Modela dados com PostgreSQL e Supabase; desenvolve mobile multiplataforma com React Native.
+- Stack principal: Rust, Actix, PostgreSQL, Supabase, React Native. Também: React, Next.js, Go, Java, Python, C++, Vulkan, Docker, Linux.
+
+## Projetos
+
+- **AuraBet** — Plataforma de iGaming de alta disponibilidade e tempo real (Rust, Svelte 4, WebSockets, PostgreSQL, Docker).
+- **Lumenix Engine** — Engine de renderização desktop de alta performance (C++, Vulkan, CMake, Dear ImGui).
+- **Aurelia Online** — MMORPG 3D multiplayer em tempo real (Unity, C#, sockets UDP, servidor autoritário, IAP).
+- **VisionForge** — App mobile de IA generativa de vídeo (React Native, C++, Vulkan).
+- **Papel & Cor** — Aplicativo de e-commerce (React Native, Node.js, PostgreSQL, Stripe, Mercado Pago).
+- **Lumina Hub** — Plataforma web corporativa de alta performance (Svelte 4 SSR, TailwindCSS, Cloudflare).
+- **Clínica Médica** — Ecossistema digital e automação de agendamento (WordPress, plugin PHP, n8n, Meta Ads).
+
+## Contato
+
+- Site: https://gustavoo.me/
+- E-mail: contato@gustavoo.me
+- WhatsApp: +55 31 99516-8069
+- GitHub: https://github.com/gustavooth
+- Itch.io: https://gustavooth.itch.io/
+- Localização: Sete Lagoas/MG, Brasil — disponibilidade imediata.

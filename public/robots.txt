@@ -35,4 +35,7 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+# Guia para LLMs / agentes de IA
+# https://gustavoo.me/llms.txt
+
 Sitemap: https://gustavoo.me/sitemap.xml
