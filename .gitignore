@@ -1,0 +1,21 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependências (caso futuramente use ferramentas de build)
+node_modules/
+npm-debug.log*
+
+# Logs e temporários
+*.log
+*.tmp
+
+# Screenshots temporários de captura (mantém apenas o image.webp do readme)
+screenshots/_*
