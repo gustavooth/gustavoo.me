@@ -78,11 +78,11 @@ export default function Hero() {
           >
             {ROLES[roleIndex]}
           </span>{" "}
-          que constrói em Sete Lagoas.
+          que constrói.
         </p>
-        <p className="blur-in text-sm md:text-base text-muted max-w-md mb-12">
-          Desenvolvedor Full Stack Sênior focado em performance, eficiência e
-          segurança — do baixo nível em Rust e C++ a apps web e mobile completos.
+        <p className="blur-in text-sm md:text-base text-text-primary/90 [text-shadow:0_1px_12px_rgba(0,0,0,0.5)] max-w-md mb-12">
+          Crio sites, aplicativos e sistemas sob medida — rápidos, seguros e
+          feitos para crescer junto com o seu negócio.
         </p>
 
         <div className="blur-in inline-flex flex-wrap justify-center gap-4">

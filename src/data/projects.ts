@@ -106,4 +106,4 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-export const ROLES = ["Full Stack", "Rustacean", "Mobile Dev", "Builder"];
+export const ROLES = ["desenvolvedor", "criador", "engenheiro", "solucionador"];
