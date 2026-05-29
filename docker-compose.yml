@@ -2,6 +2,11 @@ services:
   web:
     build: .
     image: gustavoo-me
+    # Sempre construir a imagem localmente a partir do Dockerfile.
+    # Sem isto, alguns ambientes (Compose mais antigo, Portainer, deploy
+    # só com o compose) tentam BAIXAR "gustavoo-me" de um registry e
+    # falham com "pull access denied" — a imagem só existe localmente.
+    pull_policy: build
     container_name: gustavoo-me
     ports:
       # acesse o site em http://localhost:8080

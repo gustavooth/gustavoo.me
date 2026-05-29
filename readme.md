@@ -58,6 +58,12 @@ Como funciona: o `Dockerfile` é multi-stage — o primeiro estágio (Node) roda
 serve apenas os arquivos estáticos, com gzip, cache de assets e fallback de SPA
 configurados em `nginx.conf`. A imagem final tem ~86 MB.
 
+> **Deploy em VPS:** a imagem é **construída localmente**, não vem de um
+> registry. O `docker-compose.yml` usa `pull_policy: build`, então o Docker
+> sempre constrói a partir do `Dockerfile` em vez de tentar baixar a imagem
+> (o que causaria `pull access denied`). Copie o **projeto inteiro** para a VPS
+> (não só o `docker-compose.yml`) e rode `docker compose up -d --build`.
+
 ## Estrutura
 
 ```
