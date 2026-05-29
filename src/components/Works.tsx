@@ -24,8 +24,6 @@ export default function Works() {
             </>
           }
           subtitle="Uma seleção de projetos que desenvolvi, do conceito ao lançamento."
-          actionLabel="Ver todos"
-          actionHref="#sobre"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-6">

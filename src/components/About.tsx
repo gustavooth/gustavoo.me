@@ -3,9 +3,10 @@ import SectionHeader from "./SectionHeader";
 
 const PARAS = [
   <>
-    Comecei pelos fundamentos: ao aprender <strong className="text-text-primary font-medium">C</strong>,
-    construí uma base sólida em lógica, algoritmos e gestão de memória — o que
-    tornou natural o salto para linguagens de mais alto nível.
+    Comecei pelos fundamentos: ao aprender a linguagem{" "}
+    <strong className="text-text-primary font-medium">C</strong>, construí uma
+    base sólida em lógica, algoritmos e gestão de memória — o que tornou natural
+    o salto para linguagens de mais alto nível.
   </>,
   <>
     Hoje foco essa base em <strong className="text-text-primary font-medium">performance</strong> e{" "}
