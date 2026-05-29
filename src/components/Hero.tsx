@@ -98,7 +98,9 @@ export default function Hero() {
             </span>
           </a>
           <a
-            href="mailto:contato@gustavoo.me"
+            href="https://wa.me/5531995168069?text=Ol%C3%A1%20Gustavo!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar."
+            target="_blank"
+            rel="noopener"
             className="group relative rounded-full text-sm px-7 py-3.5 text-text-primary transition-transform hover:scale-105"
           >
             <span className="absolute inset-0 rounded-full border-2 border-stroke transition-colors group-hover:border-transparent" />
