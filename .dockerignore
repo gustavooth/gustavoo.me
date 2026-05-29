@@ -1,0 +1,28 @@
+# Dependências e build (reconstruídos dentro da imagem)
+node_modules
+dist
+dist-ssr
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+
+# Git e infra Docker (não precisam ir para o contexto de build)
+.git
+.gitignore
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Logs e temporários
+*.log
+npm-debug.log*
+
+# Sistema operacional / editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode
+.idea
+
+# Capturas temporárias de screenshot
+screenshots/_*

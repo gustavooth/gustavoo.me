@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    image: gustavoo-me
+    container_name: gustavoo-me
+    ports:
+      # acesse o site em http://localhost:8080
+      - "8080:80"
+    restart: unless-stopped

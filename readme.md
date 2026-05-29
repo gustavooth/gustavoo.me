@@ -25,6 +25,26 @@ qualquer servidor de arquivos ou CDN (Vercel, Netlify, Cloudflare Pages, Nginx,
 etc.). O `vite.config.ts` usa `base: "./"` (caminhos relativos), então a `dist/`
 funciona tanto servida na raiz de um domínio quanto em um subdiretório.
 
+## Docker (rodar com um comando)
+
+Não precisa de Node instalado — o build acontece dentro do container.
+
+```bash
+docker compose up --build      # builda o site e sobe o nginx
+```
+
+Acesse **http://localhost:8080**. Para rodar em segundo plano use `-d`, e para
+parar:
+
+```bash
+docker compose down
+```
+
+Como funciona: o `Dockerfile` é multi-stage — o primeiro estágio (Node) roda
+`npm ci` + `npm run build` e gera a `dist/`; o segundo estágio (nginx alpine)
+serve apenas os arquivos estáticos, com gzip, cache de assets e fallback de SPA
+configurados em `nginx.conf`. A imagem final tem ~86 MB.
+
 ## Estrutura
 
 ```
