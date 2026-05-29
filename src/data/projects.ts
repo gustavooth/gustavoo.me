@@ -21,15 +21,15 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
-    dir: "aurelia-mmorpg",
-    title: "Aurelia Online",
-    display: "MMORPG",
-    category: "Games · Multiplayer em Tempo Real",
-    stack: ["Unity", "C#", "Sockets UDP", "Servidor Autoritário", "IAP"],
-    desc: "Jogo multiplayer 3D em tempo real na Unity com C#. O coração do projeto é a infraestrutura de rede: sockets UDP com servidor autoritário, garantindo sincronização fluida entre jogadores e prevenção de fraudes — somado a um sistema de monetização in-game (IAP) sólido e seguro.",
+    dir: "aurabet-igaming",
+    title: "AuraBet",
+    display: "iGaming",
+    category: "iGaming · Alta Disponibilidade · Tempo Real",
+    stack: ["Rust", "Svelte 4", "WebSockets", "PostgreSQL", "Docker"],
+    desc: "Plataforma de iGaming projetada para suportar picos massivos de tráfego durante grandes eventos esportivos. O núcleo de alta frequência roda em Rust, com odds em tempo real via WebSockets e front-end reativo em Svelte 4 — orquestrado em Docker sobre Linux, priorizando disponibilidade e segurança.",
     images: [
-      { file: "aurelia-mmorpg-notebook", w: 1600, h: 900, alt: "Notebook exibindo o MMORPG Aurelia Online com cidade medieval 3D e interface de mercado" },
-      { file: "aurelia-mmorpg-gameplay", w: 1600, h: 900, alt: "Cena de gameplay do MMORPG Aurelia Online com personagem explorando a capital do reino" },
+      { file: "aurabet-painel-apostas", w: 1536, h: 1024, alt: "Painel da plataforma AuraBet com partida ao vivo, odds e versão mobile do app de apostas" },
+      { file: "aurabet-estatisticas-tempo-real", w: 1536, h: 1024, alt: "Dashboard da AuraBet exibindo estatísticas e gráficos de apostas em tempo real" },
     ],
   },
   {
@@ -45,15 +45,15 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    dir: "aurabet-igaming",
-    title: "AuraBet",
-    display: "iGaming",
-    category: "iGaming · Alta Disponibilidade · Tempo Real",
-    stack: ["Rust", "Svelte 4", "WebSockets", "PostgreSQL", "Docker"],
-    desc: "Plataforma de iGaming projetada para suportar picos massivos de tráfego durante grandes eventos esportivos. O núcleo de alta frequência roda em Rust, com odds em tempo real via WebSockets e front-end reativo em Svelte 4 — orquestrado em Docker sobre Linux, priorizando disponibilidade e segurança.",
+    dir: "aurelia-mmorpg",
+    title: "Aurelia Online",
+    display: "MMORPG",
+    category: "Games · Multiplayer em Tempo Real",
+    stack: ["Unity", "C#", "Sockets UDP", "Servidor Autoritário", "IAP"],
+    desc: "Jogo multiplayer 3D em tempo real na Unity com C#. O coração do projeto é a infraestrutura de rede: sockets UDP com servidor autoritário, garantindo sincronização fluida entre jogadores e prevenção de fraudes — somado a um sistema de monetização in-game (IAP) sólido e seguro.",
     images: [
-      { file: "aurabet-painel-apostas", w: 1536, h: 1024, alt: "Painel da plataforma AuraBet com partida ao vivo, odds e versão mobile do app de apostas" },
-      { file: "aurabet-estatisticas-tempo-real", w: 1536, h: 1024, alt: "Dashboard da AuraBet exibindo estatísticas e gráficos de apostas em tempo real" },
+      { file: "aurelia-mmorpg-notebook", w: 1600, h: 900, alt: "Notebook exibindo o MMORPG Aurelia Online com cidade medieval 3D e interface de mercado" },
+      { file: "aurelia-mmorpg-gameplay", w: 1600, h: 900, alt: "Cena de gameplay do MMORPG Aurelia Online com personagem explorando a capital do reino" },
     ],
   },
   {
