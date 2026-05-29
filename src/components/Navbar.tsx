@@ -51,17 +51,14 @@ export default function Navbar() {
         <a
           href="#inicio"
           onClick={go("inicio")}
-          className="group relative w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-transform hover:scale-110"
+          className="group relative w-9 h-9 rounded-full flex items-center justify-center shrink-0 overflow-hidden transition-transform hover:scale-110"
           aria-label="Início"
         >
-          <span className="absolute inset-0 rounded-full accent-gradient" />
-          <span className="absolute inset-[2px] rounded-full bg-bg flex items-center justify-center overflow-hidden">
-            <img
-              src="favicon.svg"
-              alt="Gustavo Oliveira"
-              className="w-full h-full object-cover"
-            />
-          </span>
+          <img
+            src="favicon.svg"
+            alt="Gustavo Oliveira"
+            className="w-full h-full object-cover"
+          />
         </a>
 
         <span className="w-px h-5 bg-stroke mx-1 hidden sm:block" />

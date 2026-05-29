@@ -1,6 +1,6 @@
-# Gustavo Oliveira — Desenvolvedor Full Stack Sênior
+# Gustavo Oliveira — Desenvolvedor Full Stack
 
-> Gustavo Oliveira da Silva é Desenvolvedor Full Stack Sênior (Web, Mobile, Infraestrutura & Automação), em Sete Lagoas/MG, Brasil. Cria sites, aplicativos e sistemas sob medida — rápidos, seguros e feitos para escalar — com foco em performance, eficiência e segurança.
+> Gustavo Oliveira da Silva é Desenvolvedor Full Stack (Web, Mobile, Infraestrutura & Automação), em Sete Lagoas/MG, Brasil. Cria sites, aplicativos e sistemas sob medida — rápidos, seguros e feitos para escalar — com foco em performance, eficiência e segurança.
 
 ## Sobre
 

@@ -1,6 +1,6 @@
 # gustavoo.me
 
-Portfólio pessoal de **Gustavo Oliveira da Silva** — Desenvolvedor Full Stack Sênior (Web, Mobile, Infraestrutura & Automação).
+Portfólio pessoal de **Gustavo Oliveira da Silva** — Desenvolvedor Full Stack (Web, Mobile, Infraestrutura & Automação).
 
 Single-page dark portfolio construído com **React + Vite + TypeScript + Tailwind CSS + GSAP + Framer Motion**. Stack principal exibida no site: Rust · Actix · PostgreSQL · Supabase · React Native.
 

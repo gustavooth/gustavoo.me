@@ -47,7 +47,7 @@ export default function About() {
               Engenharia com <span className="font-display italic">propósito</span>
             </>
           }
-          subtitle="Desenvolvedor Full Stack Sênior — Web, Mobile, Infraestrutura & Automação."
+          subtitle="Desenvolvedor Full Stack — Web, Mobile, Infraestrutura & Automação."
         />
 
         <div className="grid md:grid-cols-3 gap-10 md:gap-12">
