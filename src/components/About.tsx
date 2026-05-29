@@ -31,7 +31,7 @@ const STACK = [
 ];
 
 const STATS = [
-  { value: "8+", label: "Anos de experiência" },
+  { value: "4+", label: "Anos de experiência" },
   { value: "+100", label: "Projetos entregues" },
   { value: "100%", label: "Foco em performance" },
 ];

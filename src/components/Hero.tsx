@@ -47,7 +47,7 @@ export default function Hero() {
       id="inicio"
       ref={rootRef}
       aria-label="Apresentação"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-bg"
     >
       {/* Vídeo de fundo */}
       <video
@@ -61,6 +61,9 @@ export default function Hero() {
         <source src="hero.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-black/40" />
+      {/* Vinheta radial: garante contraste do texto central mesmo sobre
+          frames claros do vídeo (ou se o vídeo ainda não pintou). */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.55)_0%,_rgba(0,0,0,0.2)_45%,_transparent_75%)]" />
       <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-bg to-transparent" />
 
       {/* Conteúdo */}
