@@ -38,7 +38,7 @@ const STATS = [
 
 export default function About() {
   return (
-    <section id="sobre" className="bg-bg py-16 md:py-24">
+    <section id="sobre" aria-label="Sobre" className="bg-bg py-16 md:py-24">
       <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-16">
         <SectionHeader
           eyebrow="Sobre"

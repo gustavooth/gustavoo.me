@@ -1,0 +1,18 @@
+{
+  "name": "Gustavo Oliveira — Desenvolvedor Full Stack Sênior",
+  "short_name": "gustavoo.me",
+  "description": "Portfólio de Gustavo Oliveira da Silva, Desenvolvedor Full Stack Sênior.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

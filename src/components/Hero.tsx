@@ -46,6 +46,7 @@ export default function Hero() {
     <section
       id="inicio"
       ref={rootRef}
+      aria-label="Apresentação"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Vídeo de fundo */}

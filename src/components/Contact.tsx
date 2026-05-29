@@ -26,6 +26,7 @@ export default function Contact() {
   return (
     <footer
       id="contato"
+      aria-label="Contato"
       className="relative bg-bg pt-16 md:pt-20 pb-8 md:pb-12 overflow-hidden"
     >
       {/* Vídeo de fundo (invertido) */}
