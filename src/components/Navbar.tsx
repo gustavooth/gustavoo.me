@@ -81,15 +81,17 @@ export default function Navbar() {
 
         <span className="w-px h-5 bg-stroke mx-1 hidden sm:block" />
 
-        {/* Say hi */}
+        {/* Contato (WhatsApp) */}
         <a
-          href="mailto:contato@gustavoo.me"
+          href="https://wa.me/5531995168069?text=Ol%C3%A1%20Gustavo!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar."
+          target="_blank"
+          rel="noopener"
           className="group relative text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2"
         >
           <span className="absolute inset-[-2px] rounded-full accent-gradient-animated opacity-0 transition-opacity group-hover:opacity-100" />
           <span className="absolute inset-0 rounded-full bg-surface backdrop-blur-md" />
           <span className="relative z-10 flex items-center gap-1 text-text-primary">
-            Fala comigo
+            Vamos conversar
             <ArrowUpRight className="w-3.5 h-3.5" />
           </span>
         </a>
