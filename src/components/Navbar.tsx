@@ -74,7 +74,7 @@ export default function Navbar() {
           aria-label="Início"
         >
           <img
-            src="favicon.svg"
+            src="/favicon.svg"
             alt="Gustavo Oliveira"
             className="w-full h-full object-cover"
           />

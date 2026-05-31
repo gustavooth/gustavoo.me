@@ -16,7 +16,7 @@ export default function Picture({
   imgClassName,
   loading = "lazy",
 }: PictureProps) {
-  const base = `projetos/${dir}/${image.file}`;
+  const base = `/projetos/${dir}/${image.file}`;
   return (
     <picture className={className}>
       <source srcSet={`${base}.avif`} type="image/avif" />

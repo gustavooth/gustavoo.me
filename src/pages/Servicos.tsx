@@ -118,7 +118,7 @@ export default function Servicos() {
         <Link to="/" className="flex items-center gap-2.5">
           <span className="w-8 h-8 rounded-full overflow-hidden">
             <img
-              src="favicon.svg"
+              src="/favicon.svg"
               alt="Gustavo Oliveira"
               className="w-full h-full object-cover"
             />

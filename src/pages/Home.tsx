@@ -5,6 +5,7 @@ import ServicosBand from "../components/ServicosBand";
 import Explorations from "../components/Explorations";
 import About from "../components/About";
 import Contact from "../components/Contact";
+import FloatingWhatsApp from "../components/FloatingWhatsApp";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <About />
       </main>
       <Contact />
+      <FloatingWhatsApp />
     </>
   );
 }
