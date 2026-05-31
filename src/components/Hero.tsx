@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ROLES } from "../data/projects";
+import ServicosCTA from "./ServicosCTA";
 
 export default function Hero() {
   const rootRef = useRef<HTMLElement>(null);
@@ -90,16 +91,16 @@ export default function Hero() {
         </p>
 
         <div className="blur-in inline-flex flex-wrap justify-center gap-4">
+          <ServicosCTA variant="hero" label="Montar meu projeto" />
           <a
             href="#projetos"
             onClick={scrollTo("projetos")}
-            className="group relative rounded-full text-sm px-7 py-3.5 bg-text-primary text-bg transition-transform hover:scale-105"
+            className="group relative rounded-full text-sm px-7 py-3.5 text-text-primary transition-transform hover:scale-105"
           >
+            <span className="absolute inset-0 rounded-full border-2 border-stroke transition-colors group-hover:border-transparent" />
             <span className="absolute inset-[-2px] rounded-full accent-gradient-animated opacity-0 transition-opacity group-hover:opacity-100" />
-            <span className="absolute inset-0 rounded-full bg-text-primary transition-colors group-hover:bg-bg" />
-            <span className="relative z-10 transition-colors group-hover:text-text-primary">
-              Ver projetos
-            </span>
+            <span className="absolute inset-[2px] rounded-full bg-bg" />
+            <span className="relative z-10">Ver projetos</span>
           </a>
           <a
             href="https://wa.me/5531995168069?text=Ol%C3%A1%20Gustavo!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar."

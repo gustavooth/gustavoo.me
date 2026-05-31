@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import ServicosCTA from "./ServicosCTA";
+import { buildWhatsAppUrl } from "../lib/whatsapp";
 
 const LINKS = [
   { label: "Início", id: "inicio" },
@@ -7,9 +10,16 @@ const LINKS = [
   { label: "Sobre", id: "sobre" },
 ];
 
+const HELLO = buildWhatsAppUrl(
+  "Olá Gustavo! Vi seu portfólio e gostaria de conversar."
+);
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("inicio");
+  const location = useLocation();
+  const navigate = useNavigate();
+  const onHome = location.pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 100);
@@ -19,6 +29,7 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    if (!onHome) return;
     const ids = [...LINKS.map((l) => l.id), "contato"];
     const observer = new IntersectionObserver(
       (entries) => {
@@ -33,11 +44,20 @@ export default function Navbar() {
       if (el) observer.observe(el);
     });
     return () => observer.disconnect();
-  }, []);
+  }, [onHome]);
 
   const go = (id: string) => (e: React.MouseEvent) => {
     e.preventDefault();
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    if (onHome) {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Volta para a home e rola até a seção após o render.
+      navigate("/");
+      window.setTimeout(
+        () => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }),
+        80
+      );
+    }
   };
 
   return (
@@ -48,9 +68,8 @@ export default function Navbar() {
         }`}
       >
         {/* Logo */}
-        <a
-          href="#inicio"
-          onClick={go("inicio")}
+        <Link
+          to="/"
           className="group relative w-9 h-9 rounded-full flex items-center justify-center shrink-0 overflow-hidden transition-transform hover:scale-110"
           aria-label="Início"
         >
@@ -59,18 +78,18 @@ export default function Navbar() {
             alt="Gustavo Oliveira"
             className="w-full h-full object-cover"
           />
-        </a>
+        </Link>
 
         <span className="w-px h-5 bg-stroke mx-1 hidden sm:block" />
 
-        {/* Links */}
+        {/* Links de seção (rolagem na home) */}
         {LINKS.map((l) => (
           <a
             key={l.id}
-            href={`#${l.id}`}
+            href={`/#${l.id}`}
             onClick={go(l.id)}
             className={`text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 transition-colors ${
-              active === l.id
+              onHome && active === l.id
                 ? "text-text-primary bg-stroke/50"
                 : "text-muted hover:text-text-primary hover:bg-stroke/50"
             }`}
@@ -81,17 +100,21 @@ export default function Navbar() {
 
         <span className="w-px h-5 bg-stroke mx-1 hidden sm:block" />
 
+        {/* Isca: Serviços */}
+        <ServicosCTA variant="nav" />
+
         {/* Contato (WhatsApp) */}
         <a
-          href="https://wa.me/5531995168069?text=Ol%C3%A1%20Gustavo!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar."
+          href={HELLO}
           target="_blank"
           rel="noopener"
-          className="group relative text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2"
+          className="group relative text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 ml-1"
         >
           <span className="absolute inset-[-2px] rounded-full accent-gradient-animated opacity-0 transition-opacity group-hover:opacity-100" />
           <span className="absolute inset-0 rounded-full bg-surface backdrop-blur-md" />
           <span className="relative z-10 flex items-center gap-1 text-text-primary">
-            Vamos conversar
+            <span className="hidden sm:inline">Vamos conversar</span>
+            <span className="sm:hidden">Contato</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </span>
         </a>
