@@ -4,10 +4,10 @@ const WHATSAPP_URL =
 /** Botão flutuante de WhatsApp, no tema do site (fundo escuro + borda em
  *  gradiente azul accent). Fixo no canto inferior direito.
  *
- *  A entrada é feita por animação CSS (não Framer Motion) de propósito:
- *  requestAnimationFrame fica congelado em abas em segundo plano, então uma
- *  animação JS poderia deixar o botão preso em opacity:0. Com CSS, o estado
- *  final (visível) é garantido mesmo se a animação não rodar. */
+ *  IMPORTANTE: o botão é visível por padrão (sem animação de entrada que
+ *  controle opacidade). Animações (CSS ou JS) ficam pausadas em abas em
+ *  segundo plano, o que deixaria o botão preso invisível. Aqui só há
+ *  transições disparadas por interação (hover), que não afetam o estado base. */
 export default function FloatingWhatsApp() {
   return (
     <a
@@ -15,7 +15,6 @@ export default function FloatingWhatsApp() {
       target="_blank"
       rel="noopener"
       aria-label="Conversar no WhatsApp"
-      style={{ animation: "fab-in 0.5s ease-out 1s both" }}
       className="group fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 flex items-center justify-center w-14 h-14 transition-transform duration-300 hover:scale-110 active:scale-95"
     >
       {/* Borda em gradiente (suave; intensifica no hover) */}

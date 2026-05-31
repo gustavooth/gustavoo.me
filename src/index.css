@@ -72,17 +72,6 @@
     background-position: 0% 50%;
   }
 }
-/* Entrada do botão flutuante de WhatsApp (CSS, não JS — ver FloatingWhatsApp.tsx) */
-@keyframes fab-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.6) translateY(16px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
 
 /* Scrollbar discreta no tema dark */
 ::-webkit-scrollbar {
