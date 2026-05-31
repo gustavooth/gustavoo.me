@@ -72,7 +72,5 @@ export function buildServiceMessage({
     );
   }
 
-  sections.push("(Enviado pelo configurador em gustavoo.me)");
-
   return sections.join("\n\n");
 }
