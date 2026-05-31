@@ -1,27 +1,26 @@
-import { motion } from "framer-motion";
-
 const WHATSAPP_URL =
   "https://wa.me/5531995168069?text=Ol%C3%A1%20Gustavo!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar.";
 
 /** Botão flutuante de WhatsApp, no tema do site (fundo escuro + borda em
- *  gradiente azul accent). Fixo no canto inferior direito. */
+ *  gradiente azul accent). Fixo no canto inferior direito.
+ *
+ *  A entrada é feita por animação CSS (não Framer Motion) de propósito:
+ *  requestAnimationFrame fica congelado em abas em segundo plano, então uma
+ *  animação JS poderia deixar o botão preso em opacity:0. Com CSS, o estado
+ *  final (visível) é garantido mesmo se a animação não rodar. */
 export default function FloatingWhatsApp() {
   return (
-    <motion.a
+    <a
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener"
       aria-label="Conversar no WhatsApp"
-      initial={{ opacity: 0, scale: 0.6, y: 20 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ delay: 1.2, type: "spring", stiffness: 260, damping: 20 }}
-      whileHover={{ scale: 1.08 }}
-      whileTap={{ scale: 0.95 }}
-      className="group fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 flex items-center justify-center w-14 h-14"
+      style={{ animation: "fab-in 0.5s ease-out 1s both" }}
+      className="group fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 flex items-center justify-center w-14 h-14 transition-transform duration-300 hover:scale-110 active:scale-95"
     >
-      {/* Borda em gradiente (sempre suave, intensifica no hover) */}
+      {/* Borda em gradiente (suave; intensifica no hover) */}
       <span className="absolute inset-0 rounded-full accent-gradient-animated opacity-70 transition-opacity duration-300 group-hover:opacity-100" />
-      {/* Halo pulsante discreto */}
+      {/* Halo suave */}
       <span className="absolute inset-0 rounded-full accent-gradient opacity-30 blur-md transition-opacity duration-300 group-hover:opacity-60" />
       {/* Miolo escuro (tema do site) */}
       <span className="absolute inset-[2px] rounded-full bg-surface" />
@@ -39,6 +38,6 @@ export default function FloatingWhatsApp() {
       <span className="pointer-events-none absolute right-full mr-3 hidden md:block whitespace-nowrap rounded-full bg-surface border border-stroke px-3 py-1.5 text-xs text-text-primary opacity-0 translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0">
         Vamos conversar
       </span>
-    </motion.a>
+    </a>
   );
 }
