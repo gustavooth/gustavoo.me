@@ -91,7 +91,7 @@ export default function Hero() {
         </p>
 
         <div className="blur-in inline-flex flex-wrap justify-center gap-4">
-          <ServicosCTA variant="hero" label="Montar meu projeto" />
+          <ServicosCTA variant="hero" label="Conheça meus serviços" />
           <a
             href="#projetos"
             onClick={scrollTo("projetos")}

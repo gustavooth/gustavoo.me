@@ -8,6 +8,7 @@ import WizardProgress from "../components/services/WizardProgress";
 import StepService from "../components/services/StepService";
 import StepConfig from "../components/services/StepConfig";
 import StepContact from "../components/services/StepContact";
+import { setPageSeo, SERVICOS_SEO } from "../lib/seo";
 
 interface State {
   step: 1 | 2 | 3;
@@ -81,6 +82,9 @@ function reducer(state: State, action: Action): State {
 export default function Servicos() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const service = getService(state.serviceId);
+
+  // SEO da rota no client-side (navegação SPA sem reload).
+  useEffect(() => setPageSeo(SERVICOS_SEO), []);
 
   // Rola para o topo a cada troca de passo.
   useEffect(() => {

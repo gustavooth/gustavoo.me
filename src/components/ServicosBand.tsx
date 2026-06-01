@@ -45,7 +45,7 @@ export default function ServicosBand() {
           ))}
         </div>
 
-        <ServicosCTA variant="band" label="Montar meu projeto" />
+        <ServicosCTA variant="band" label="Ver meus serviços" />
       </motion.div>
     </section>
   );

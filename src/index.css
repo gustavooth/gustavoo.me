@@ -40,6 +40,21 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  /* Brilho pulsante para o CTA-isca (estado base já visível: seguro em
+     abas de segundo plano, pois a animação só varia a intensidade). */
+  .pulse-glow {
+    animation: pulse-glow 2.8s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.7;
+  }
 }
 
 /* Animações que o Tailwind também expõe, mas mantidas aqui conforme o design system */
